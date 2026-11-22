@@ -23,6 +23,32 @@ flowchart LR
 
 **Local implementation:** Python standard library, SQLite, SQL analytics, `unittest`, GitHub Actions. **Cloud path:** ADF Copy + Notebook activity, ADLS Gen2, Azure Databricks Delta Lake `MERGE`, starter Terraform and dashboard design.
 
+## Visual architecture and verified evidence
+
+### Local pipeline — implemented and tested
+
+![Local architecture: Python ingestion, Bronze audit, quality checks, Silver current rows and Gold reporting](docs/images/architecture_local.png)
+
+[Editable SVG diagram](docs/images/architecture_local.svg) · [Architecture and design decisions](docs/architecture.md)
+
+### Verified example outputs
+
+![Daily completed revenue based on shipped synthetic CSV fixtures](docs/images/verified_gold_dashboard.png)
+
+The image above is a **static visual rendering of the verified Gold CSV outputs**, not a live Power BI dashboard. The test transcript and command output were captured from a fresh local run of this repository:
+
+| Test execution (14 cases) | CLI execution summary |
+|---|---|
+| ![Local unittest output](docs/images/verified_test_run.png) | ![Executed pipeline summary](docs/images/verified_cli_summary.png) |
+
+All values use synthetic input data. The latest GitHub Actions status is shown in the badge at the top of this README; the local screenshots provide reproducible reference evidence, not live CI screenshots.
+
+### Azure target — design only (not deployed)
+
+![Proposed Azure ADF, ADLS Gen2, Databricks Delta layers and BI target architecture](docs/images/architecture_azure_target.png)
+
+[Editable Azure SVG diagram](docs/images/architecture_azure_target.svg) · [Cloud deployment prerequisites](docs/cloud_deployment.md)
+
 ## Verified local result
 
 | Metric | Result | Explanation |

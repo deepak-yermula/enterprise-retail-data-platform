@@ -2,6 +2,10 @@
 
 ## A. Reproducible local system (implemented and tested)
 
+![Local pipeline architecture](images/architecture_local.png)
+
+[Editable SVG](images/architecture_local.svg)
+
 ```mermaid
 flowchart TB
     CSV[CSV batches] --> I[Local ingestion service]
@@ -32,6 +36,10 @@ flowchart TB
 Gold aggregates are rebuilt in full for simplicity. This is appropriate for a synthetic demo, not a recommended pattern for billion-row data. The SQLite pipeline is a **local reference implementation**, not an actual distributed Spark engine.
 
 ## B. Azure target architecture (not deployed)
+
+![Azure target architecture design, not deployed](images/architecture_azure_target.png)
+
+[Editable SVG](images/architecture_azure_target.svg)
 
 ```mermaid
 flowchart TB

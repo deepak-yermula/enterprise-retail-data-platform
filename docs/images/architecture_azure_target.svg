@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="980" viewBox="0 0 1680 980">
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,5 L0,10Z" fill="#6386B5"/></marker></defs>
+<rect width="1680" height="980" fill="#F7FAFE"/>
+<rect x="0" y="0" width="1680" height="11" fill="#2563EB"/>
+<text x="72" y="95" text-anchor="start" font-family="DejaVu Sans,Arial,sans-serif" font-size="47" font-weight="800" fill="#11233F">Enterprise retail pipeline  |  Azure target</text><text x="72" y="139" text-anchor="start" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="450" fill="#566984">Planned extension mapped to ADF, ADLS Gen2, Databricks / Delta, Terraform and Power BI</text>
+<rect x="56" y="232" width="342" height="150" rx="18" fill="#FFFFFF" stroke="#D7E0EC" stroke-width="2"/>
+<text x="76" y="280" text-anchor="start" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="800" fill="#1752AD">SOURCE SYSTEMS</text>
+<text x="76" y="326" text-anchor="start" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="620" fill="#172B48">API / SQL / CSV</text>
+<text x="76" y="354" text-anchor="start" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="450" fill="#566984">Contracts + permissions</text>
+<rect x="462" y="232" width="342" height="150" rx="18" fill="#FFFFFF" stroke="#D7E0EC" stroke-width="2"/>
+<text x="482" y="280" text-anchor="start" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="800" fill="#1752AD">AZURE DATA FACTORY</text>
+<text x="482" y="326" text-anchor="start" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="620" fill="#172B48">Copy and orchestration</text>
+<text x="482" y="354" text-anchor="start" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="450" fill="#566984">Retry / schedule / dependencies</text>
+<rect x="868" y="232" width="342" height="150" rx="18" fill="#FFFFFF" stroke="#D7E0EC" stroke-width="2"/>
+<text x="888" y="280" text-anchor="start" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="800" fill="#1752AD">ADLS GEN2</text>
+<text x="888" y="326" text-anchor="start" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="620" fill="#172B48">Landing zone</text>
+<text x="888" y="354" text-anchor="start" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="450" fill="#566984">Secure storage / access control</text>
+<rect x="1274" y="232" width="342" height="150" rx="18" fill="#FFFFFF" stroke="#D7E0EC" stroke-width="2"/>
+<text x="1294" y="280" text-anchor="start" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="800" fill="#1752AD">DATABRICKS</text>
+<text x="1294" y="326" text-anchor="start" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="620" fill="#172B48">Notebook / Spark jobs</text>
+<text x="1294" y="354" text-anchor="start" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="450" fill="#566984">Quality checks and Delta MERGE</text>
+<rect x="1274" y="556" width="342" height="150" rx="18" fill="#FFFFFF" stroke="#D7E0EC" stroke-width="2"/>
+<text x="1294" y="604" text-anchor="start" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="800" fill="#1752AD">BRONZE + REJECTS</text>
+<text x="1294" y="650" text-anchor="start" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="620" fill="#172B48">Raw Delta / quarantine</text>
+<text x="1294" y="678" text-anchor="start" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="450" fill="#566984">Source audit and failures</text>
+<rect x="868" y="556" width="342" height="150" rx="18" fill="#FFFFFF" stroke="#D7E0EC" stroke-width="2"/>
+<text x="888" y="604" text-anchor="start" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="800" fill="#1752AD">SILVER DELTA</text>
+<text x="888" y="650" text-anchor="start" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="620" fill="#172B48">Current-version MERGE</text>
+<text x="888" y="678" text-anchor="start" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="450" fill="#566984">Validated dimensional data</text>
+<rect x="462" y="556" width="342" height="150" rx="18" fill="#FFFFFF" stroke="#D7E0EC" stroke-width="2"/>
+<text x="482" y="604" text-anchor="start" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="800" fill="#1752AD">GOLD DELTA</text>
+<text x="482" y="650" text-anchor="start" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="620" fill="#172B48">Analytical aggregates</text>
+<text x="482" y="678" text-anchor="start" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="450" fill="#566984">Incremental strategy required</text>
+<rect x="56" y="556" width="342" height="150" rx="18" fill="#FFFFFF" stroke="#D7E0EC" stroke-width="2"/>
+<text x="76" y="604" text-anchor="start" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="800" fill="#1752AD">BI CONSUMPTION</text>
+<text x="76" y="650" text-anchor="start" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="620" fill="#172B48">Power BI / SQL serving</text>
+<text x="76" y="678" text-anchor="start" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="450" fill="#566984">Dashboard integration pending</text>
+<path d="M 398,306 L 454,306" fill="none" stroke="#6386B5" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)"/>
+<path d="M 804,306 L 860,306" fill="none" stroke="#6386B5" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)"/>
+<path d="M 1210,306 L 1266,306" fill="none" stroke="#6386B5" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)"/>
+<path d="M 1445,382 L 1445,548" fill="none" stroke="#6386B5" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)"/>
+<path d="M 1274,633 L 1217,633" fill="none" stroke="#6386B5" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)"/>
+<path d="M 868,633 L 811,633" fill="none" stroke="#6386B5" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)"/>
+<path d="M 462,633 L 406,633" fill="none" stroke="#6386B5" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="55" y="746" width="285" height="34" rx="17" fill="#FFF5E7" stroke="#FFF5E7" stroke-width="2"/><text x="197.5" y="770" text-anchor="middle" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" font-weight="700" fill="#A5691A">Architecture blueprint</text>
+<text x="62" y="823" text-anchor="start" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="500" fill="#566984">Requires Azure provisioning, identity/network configuration, workspace tests and deployment evidence</text>
+<rect x="56" y="877" width="1568" height="65" rx="15" fill="#EAF1FC" stroke="#EAF1FC" stroke-width="2"/><text x="77" y="918" text-anchor="start" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="500" fill="#334E70">DESIGN ONLY  •  Azure resources have NOT been provisioned  •  No cloud performance claims</text></svg>

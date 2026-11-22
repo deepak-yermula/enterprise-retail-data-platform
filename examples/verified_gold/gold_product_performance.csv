@@ -1,0 +1,6 @@
+product_id,product_name,category,units_sold,revenue_cents
+P001,Laptop,Electronics,1,85000
+P002,Keyboard,Electronics,3,12000
+P003,Desk,Furniture,3,66000
+P004,Chair,Furniture,2,26000
+P005,Mouse,Electronics,4,8000

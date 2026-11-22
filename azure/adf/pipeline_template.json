@@ -1,0 +1,52 @@
+{
+  "name": "PL_Retail_Batch_Ingest_And_Transform",
+  "properties": {
+    "description": "TEMPLATE: Configure referenced datasets and linked services in your own Azure subscription before publishing.",
+    "parameters": {
+      "batch_id": { "type": "String" },
+      "file_name": { "type": "String" },
+      "orders_csv_path": { "type": "String" },
+      "customers_csv_path": { "type": "String" },
+      "products_csv_path": { "type": "String" },
+      "lake_root": { "type": "String" }
+    },
+    "activities": [
+      {
+        "name": "Copy_Order_CSV_To_Landing",
+        "type": "Copy",
+        "dependsOn": [],
+        "policy": { "timeout": "0.01:00:00", "retry": 2, "retryIntervalInSeconds": 30 },
+        "typeProperties": {
+          "source": { "type": "DelimitedTextSource", "storeSettings": { "type": "AzureBlobFSReadSettings", "recursive": false } },
+          "sink": { "type": "DelimitedTextSink", "storeSettings": { "type": "AzureBlobFSWriteSettings" } }
+        },
+        "inputs": [
+          { "referenceName": "DS_Retail_Source_CSV", "type": "DatasetReference", "parameters": { "file_name": { "value": "@pipeline().parameters.file_name", "type": "Expression" } } }
+        ],
+        "outputs": [
+          { "referenceName": "DS_Retail_Landing_CSV", "type": "DatasetReference", "parameters": { "file_name": { "value": "@pipeline().parameters.file_name", "type": "Expression" } } }
+        ]
+      },
+      {
+        "name": "Run_Databricks_Medallion",
+        "type": "DatabricksNotebook",
+        "dependsOn": [
+          { "activity": "Copy_Order_CSV_To_Landing", "dependencyConditions": ["Succeeded"] }
+        ],
+        "linkedServiceName": { "referenceName": "LS_AzureDatabricks", "type": "LinkedServiceReference" },
+        "policy": { "timeout": "0.02:00:00", "retry": 1, "retryIntervalInSeconds": 60 },
+        "typeProperties": {
+          "notebookPath": "/Shared/retail_medallion",
+          "baseParameters": {
+            "batch_id": { "value": "@pipeline().parameters.batch_id", "type": "Expression" },
+            "orders_csv_path": { "value": "@pipeline().parameters.orders_csv_path", "type": "Expression" },
+            "customers_csv_path": { "value": "@pipeline().parameters.customers_csv_path", "type": "Expression" },
+            "products_csv_path": { "value": "@pipeline().parameters.products_csv_path", "type": "Expression" },
+            "lake_root": { "value": "@pipeline().parameters.lake_root", "type": "Expression" }
+          }
+        }
+      }
+    ],
+    "annotations": ["portfolio-blueprint", "manual-wiring-required"]
+  }
+}
